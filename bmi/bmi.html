@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HENAKIO - Kalkulator BMI</title>
+    <link rel="stylesheet" href="bmi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo">HENAKIO</a>
+            <nav>
+                <a href="../index.html">Beranda</a>
+                <a href="../konsultasi/konsultasi.html">Konsultasi</a>
+                <a href="../tentangkami/tentangkami.html">Tentang Kami</a>
+            </nav>
+            <a href="../login/login.html" class="login-btn">LOGIN</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Calculator Form -->
+        <div class="calculator-card" id="calculator-form">
+            <form id="bmi-form">
+                <div class="form-row">
+                    <label for="weight">Berat Sekarang</label>
+                    <input type="number" id="weight" step="0.1" required placeholder="Kg">
+                </div>
+
+                <div class="form-row">
+                    <label for="birth-weight">Berat Lahir</label>
+                    <input type="number" id="birth-weight" step="0.1" required placeholder="Kg">
+                </div>
+
+                <div class="form-row">
+                    <label for="age">Usia</label>
+                    <input type="number" id="age" required placeholder="Tahun">
+                </div>
+
+                <div class="form-row">
+                    <div class="age-months">
+                        <input type="number" id="months" required placeholder="Bulan">
+                    </div>
+                </div>
+
+                <div class="form-row gender-row">
+                    <label class="gender-label">Jenis Kelamin</label>
+                    <div class="radio-container">
+                        <div class="radio-option">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Laki-Laki</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Perempuan</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="results-section" style="display: none;">
+            <!-- Ideal Weight Card -->
+            <div class="result-card weight-indicator-card">
+                <div class="weight-header">
+                    Berat Ideal : <span id="ideal-weight-range">9.09 - 10.16 kg</span>
+                </div>
+                
+                <div class="weight-scale">
+                    <div class="scale-numbers">
+                        <span id="min-weight">9.09</span>
+                        <span id="mid-weight">10.16</span>
+                        <span id="max-weight">11.4</span>
+                    </div>
+                    <div class="scale-bar">
+                        <div class="scale-segment underweight"></div>
+                        <div class="scale-segment healthy"></div>
+                        <div class="scale-segment overweight"></div>
+                        <div class="scale-segment obese"></div>
+                        <div class="weight-marker" id="weight-marker"></div>
+                    </div>
+                    <div class="scale-labels">
+                        <span class="underweight-label">Under weight</span>
+                        <span class="healthy-label">Healthy</span>
+                        <span class="overweight-label">Over weight</span>
+                        <span class="obese-label">Obese</span>
+                    </div>
+                </div>
+                
+                <div class="weight-description">
+                    Berat ideal diperoleh dari perbandingan panjang dengan berat badan
+                </div>
+            </div>
+            
+            <!-- Food Recommendations Card -->
+            <div class="result-card food-recommendations">
+                <div class="recommendations-header">
+                    Rekomendasi Makanan
+                </div>
+                <ul class="food-list">
+                    <li>Bubur nasi dengan daging cincang dan hati ayam</li>
+                    <li>Telur orak-arik dengan keju dan sayuran halus</li>
+                    <li>Sup krim labu dengan ayam suwir</li>
+                    <li>Puding susu dan buah segar</li>
+                    <li>Smoothie alpukat, pisang, dan yoghurt</li>
+                </ul>
+            </div>
+            
+            <button id="recalculate-btn" class="submit-btn">Hitung Ulang</button>
+        </div>
+    </main>
+
+    <script src="bmi.js"></script>
+</body>
+</html> 

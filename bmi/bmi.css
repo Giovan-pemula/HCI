@@ -1,0 +1,398 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('../image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    font-weight: 500;
+    position: relative;
+}
+
+nav a:hover, nav a.active {
+    color: #000;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+.login-btn {
+    border: 1px solid #333;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px 0 40px;
+}
+
+/* Calculator Card */
+.calculator-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    max-width: 90%;
+}
+
+/* Form Styles */
+.form-row {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.form-row input[type="number"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Style for months field without label */
+.age-months {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Gender Radio Styles */
+.gender-row {
+    margin-bottom: 40px;
+}
+
+.gender-label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.radio-container {
+    display: flex;
+    gap: 100px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    accent-color: #4285F4;
+}
+
+.radio-option label {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #3367d6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    
+    .calculator-card {
+        padding: 30px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-row label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    
+    .form-row input[type="number"] {
+        width: 100%;
+    }
+    
+    .gender-row {
+        flex-direction: column;
+    }
+    
+    .radio-container {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 20px;
+    }
+}
+
+/* Results Section */
+.results-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 700px;
+    max-width: 90%;
+}
+
+.result-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Weight Indicator Card */
+.weight-indicator-card {
+    padding: 0;
+}
+
+.weight-header {
+    background-color: #4285F4;
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.weight-scale {
+    padding: 20px 30px;
+}
+
+.scale-numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 0 5%;
+}
+
+.scale-numbers span {
+    color: #666;
+    font-size: 14px;
+}
+
+.scale-bar {
+    display: flex;
+    position: relative;
+    height: 8px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.scale-segment {
+    height: 100%;
+    flex: 1;
+}
+
+.scale-segment.underweight {
+    background-color: #4285F4;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.scale-segment.healthy {
+    background-color: #34A853;
+}
+
+.scale-segment.overweight {
+    background-color: #FBBC05;
+}
+
+.scale-segment.obese {
+    background-color: #EA4335;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.weight-marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 3px solid #4285F4;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 15%; /* This will be adjusted by JavaScript */
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.underweight-label {
+    flex: 1;
+    color: #4285F4;
+    text-align: left;
+}
+
+.healthy-label {
+    flex: 1;
+    color: #34A853;
+    text-align: center;
+}
+
+.overweight-label {
+    flex: 1;
+    color: #FBBC05;
+    text-align: center;
+}
+
+.obese-label {
+    flex: 1;
+    color: #EA4335;
+    text-align: right;
+}
+
+.weight-description {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+/* Food Recommendations */
+.food-recommendations {
+    padding: 0;
+}
+
+.recommendations-header {
+    background-color: #4285F4;
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.food-list {
+    list-style-position: inside;
+    padding: 20px 30px;
+}
+
+.food-list li {
+    padding: 10px 0;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+
+.food-list li:last-child {
+    border-bottom: none;
+}
+
+/* Recalculate Button */
+#recalculate-btn {
+    margin-top: 10px;
+} 

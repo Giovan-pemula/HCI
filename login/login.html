@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HENAKIO</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo">HENAKIO</a>
+            <nav>
+                <a href="../index.html">Beranda</a>
+                <a href="#">Konsultasi</a>
+                <a href="../tentangkami/tentangkami.html">Tentang Kami</a>
+            </nav>
+            <a href="#" class="login-btn active">LOGIN</a>
+        </div>
+    </header>
+
+    <main class="login-section">
+        <div class="login-card">
+            <div class="login-content">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <p class="register-link">Belum punya akun? <a href="../register/register.html">Daftar Sekarang</a></p>
+            </div>
+            <div class="login-image">
+                <img src="baby.png" alt="Baby with towel">
+            </div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html> 
