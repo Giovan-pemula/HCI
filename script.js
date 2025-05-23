@@ -54,6 +54,6 @@ function checkLoginStatus() {
         });
     } else if (loginBtn) {
         // Make sure login button points to login page
-        loginBtn.href = '../login/login.html';
+        loginBtn.href = 'login/login.html';
     }
 } 
