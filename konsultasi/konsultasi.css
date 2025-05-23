@@ -164,8 +164,9 @@ nav a:hover::after, nav a.active::after {
 }
 
 .message.user {
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-self: flex-end;
+    justify-content: flex-end;
 }
 
 .message-avatar {
@@ -185,6 +186,7 @@ nav a:hover::after, nav a.active::after {
 }
 
 .message.user .message-bubble {
+    margin-right: 10px;
     background-color: #0084ff;
     color: white;
 }

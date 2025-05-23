@@ -28,12 +28,30 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = document.getElementById('phone').value;
             const password = document.getElementById('password').value;
             
+            // Validate name length and content
+            if (name.length < 4 || name.length > 24) {
+                alert('Nama harus terdiri dari 4 sampai 24 karakter');
+                return;
+            }
+
+            // Check if name contains numbers
+            if (/[0-9]/.test(name)) {
+                alert('Nama tidak boleh mengandung angka');
+                return;
+            }
+
+            // Validate phone number format
+            if (!phone.startsWith('08') || phone.length < 11 || phone.length > 12 || !/^[0-9]+$/.test(phone)) {
+                alert('Nomor telepon harus diawali dengan 08 dan terdiri dari 11-12 digit');
+                return;
+            }
+            
             // Get existing users or create empty array
             let users = JSON.parse(localStorage.getItem('users')) || [];
             
             // Check if username already exists
             if (users.some(user => user.username === username)) {
-                alert('Username sudah digunakan. Silakan pilih username lain.');
+                alert('Nama pengguna sudah digunakan. Silakan pilih nama pengguna lain');
                 return;
             }
             
@@ -49,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Save updated users to localStorage
             localStorage.setItem('users', JSON.stringify(users));
             
-            // Alert success and redirect to login page instead of home page
-            alert('Registrasi berhasil! Silakan login.');
+            // Alert success and redirect to login page
+            alert('Pendaftaran berhasil! Silakan login untuk melanjutkan');
             window.location.href = '../login/login.html';
         });
     }

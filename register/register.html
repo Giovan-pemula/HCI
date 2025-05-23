@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <a href="../index.html" class="logo">HENAKIO</a>
-            <nav>   
+            <nav>
                 <a href="../index.html">Beranda</a>
                 <a href="../konsultasi/konsultasi.html">Konsultasi</a>
                 <a href="../tentangkami/tentangkami.html">Tentang Kami</a>
@@ -27,7 +27,8 @@
                 <form id="registerForm">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" pattern="[A-Za-z ]{4,24}" title="Name must be between 4 and 24 characters and cannot contain numbers" required>
+                        <small class="name-hint" style="color: #666; font-size: 12px;">Nama harus 4-24 huruf dan tidak mengandung nomor</small>
                     </div>
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -35,8 +36,8 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{11,12}" title="Phone number must be 11-12 digits" required>
-                        <small class="phone-hint" style="color: #666; font-size: 12px;">Phone number must be 11-12 digits</small>
+                        <input type="tel" id="phone" name="phone" pattern="08[0-9]{9,10}" title="Phone number must start with 08 and be 11-12 digits total" required>
+                        <small class="phone-hint" style="color: #666; font-size: 12px;">Nomor dimulai dengan 08 dan panjang nomor 11-12</small>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
