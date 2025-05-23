@@ -136,8 +136,8 @@ function calculateAndDisplayResults(currentWeight, height, years, months, gender
         }
     } else { // Above 5 years - use standard BMI-for-age
         const bmi = currentWeight / (heightInMeters * heightInMeters);
-        
-        if (gender === 'male') {
+    
+    if (gender === 'male') {
             idealWeightRange = {
                 min: (14.0 * heightInMeters * heightInMeters),
                 max: (16.5 * heightInMeters * heightInMeters),
@@ -174,13 +174,13 @@ function calculateAndDisplayResults(currentWeight, height, years, months, gender
     } else {
         weightStatus = 'obese';
     }
-
+    
     // Display the ideal weight range
     document.getElementById('ideal-weight-range').textContent = `${minIdealWeight} - ${maxIdealWeight} kg`;
     document.getElementById('min-weight').textContent = minIdealWeight;
     document.getElementById('mid-weight').textContent = maxIdealWeight;
     document.getElementById('max-weight').textContent = overweightThreshold;
-
+    
     // Set position of weight marker on scale
     let markerPosition;
     if (currentWeight < minIdealWeight) {
@@ -192,9 +192,9 @@ function calculateAndDisplayResults(currentWeight, height, years, months, gender
     } else {
         markerPosition = 75 + Math.min(((currentWeight - overweightThreshold) / (obeseThreshold - overweightThreshold)) * 25, 25);
     }
-
+    
     document.getElementById('weight-marker').style.left = `${markerPosition}%`;
-
+    
     // Display BMI value and status
     const bmiInfoElement = document.createElement('div');
     bmiInfoElement.className = 'bmi-info';

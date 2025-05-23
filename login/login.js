@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (user.role === 'doctor') {
                     window.location.href = '../doctor/doctor.html';
                 } else {
-                    window.location.href = '../index.html';
+                    window.location.href = '../home/index.html';
                 }
             } else {
                 alert('Username atau password salah. Silakan coba lagi.');
@@ -114,7 +114,7 @@ function checkLoginStatus() {
         loginBtn.addEventListener('click', function(e) {
             if (confirm('Apakah Anda ingin logout?')) {
                 localStorage.removeItem('currentUser');
-                window.location.href = '../index.html';
+                window.location.href = '../home/index.html';
             }
             e.preventDefault();
         });

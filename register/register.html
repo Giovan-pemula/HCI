@@ -10,9 +10,9 @@
 <body>
     <header>
         <div class="container">
-            <a href="../index.html" class="logo">HENAKIO</a>
+            <a href="../home/index.html" class="logo">HENAKIO</a>
             <nav>
-                <a href="../index.html">Beranda</a>
+                <a href="../home/index.html">Beranda</a>
                 <a href="#">Konsultasi</a>
                 <a href="../tentangkami/tentangkami.html">Tentang Kami</a>
             </nav>
@@ -35,7 +35,8 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{11,12}" title="Phone number must be 11-12 digits" required>
+                        <small class="phone-hint" style="color: #666; font-size: 12px;">Phone number must be 11-12 digits</small>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
