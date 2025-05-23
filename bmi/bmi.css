@@ -115,7 +115,7 @@ main {
 
 /* Form Styles */
 .form-row {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -123,16 +123,16 @@ main {
 .form-row label {
     font-weight: 500;
     color: #333;
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 6px;
+    font-size: 14px;
     text-align: left;
 }
 
 .form-row input[type="number"] {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 12px 15px;
-    font-size: 16px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
     width: 100%;
 }
 
@@ -144,17 +144,17 @@ main {
 
 /* Gender Radio Styles */
 .gender-row {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .gender-label {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .radio-container {
     display: flex;
-    gap: 100px;
+    gap: 60px;
 }
 
 .radio-option {
@@ -163,27 +163,27 @@ main {
 }
 
 .radio-option input[type="radio"] {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
     accent-color: #4285F4;
 }
 
 .radio-option label {
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Submit Button */
 .submit-btn {
     width: 100%;
-    padding: 15px;
-    margin-top: 10px;
+    padding: 10px;
+    margin-top: 8px;
     background-color: #4285F4;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 4px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -200,7 +200,7 @@ main {
     }
     
     .calculator-card {
-        padding: 30px;
+        padding: 20px;
     }
     
     .form-row {
@@ -223,13 +223,13 @@ main {
     }
     
     .radio-container {
-        margin-top: 8px;
+        gap: 40px;
     }
 }
 
 @media (max-width: 480px) {
     .calculator-card {
-        padding: 20px;
+        padding: 15px;
     }
 }
 
@@ -237,15 +237,15 @@ main {
 .results-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 700px;
+    gap: 15px;
+    width: 500px;
     max-width: 90%;
 }
 
 .result-card {
     background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -257,34 +257,50 @@ main {
 .weight-header {
     background-color: #4285F4;
     color: white;
-    padding: 15px 20px;
-    font-size: 18px;
+    padding: 12px 15px;
+    font-size: 15px;
     font-weight: 500;
     text-align: center;
 }
 
+/* BMI Info Display */
+.bmi-info {
+    background-color: #F8F9FA;
+    padding: 4px 20px;
+    text-align: center;
+    font-size: 11px;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    letter-spacing: -0.2px;
+}
+
+.bmi-info strong {
+    color: #4285F4;
+    font-weight: 500;
+}
+
 .weight-scale {
-    padding: 20px 30px;
+    padding: 15px 20px;
 }
 
 .scale-numbers {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     padding: 0 5%;
 }
 
 .scale-numbers span {
     color: #666;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .scale-bar {
     display: flex;
     position: relative;
-    height: 8px;
-    border-radius: 4px;
-    margin: 15px 0;
+    height: 6px;
+    border-radius: 3px;
+    margin: 12px 0;
 }
 
 .scale-segment {
@@ -314,21 +330,20 @@ main {
 
 .weight-marker {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     background-color: white;
-    border: 3px solid #4285F4;
+    border: 2px solid #4285F4;
     border-radius: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    left: 15%; /* This will be adjusted by JavaScript */
 }
 
 .scale-labels {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
 .underweight-label {
@@ -356,9 +371,9 @@ main {
 }
 
 .weight-description {
-    padding: 15px 20px;
+    padding: 12px 15px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     color: #666;
     border-top: 1px solid #eee;
 }
@@ -371,21 +386,22 @@ main {
 .recommendations-header {
     background-color: #4285F4;
     color: white;
-    padding: 15px 20px;
-    font-size: 18px;
+    padding: 12px 15px;
+    font-size: 15px;
     font-weight: 500;
     text-align: center;
 }
 
 .food-list {
     list-style-position: inside;
-    padding: 20px 30px;
+    padding: 15px 20px;
 }
 
 .food-list li {
-    padding: 10px 0;
+    padding: 8px 0;
     color: #666;
     border-bottom: 1px solid #eee;
+    font-size: 13px;
 }
 
 .food-list li:last-child {
