@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "HCI",
+			"path": "."
+		},
+		{
+			"name": "HCILecture",
+			"path": "../../HCILecture"
+		}
+	],
+	"settings": {}
+}
